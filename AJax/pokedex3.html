@@ -1,0 +1,124 @@
+2
+<html lang="en">
+3
+​
+4
+<head>
+5
+    <meta charset="UTF-8">
+6
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+7
+    <title>Poke Dex</title>
+8
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+9
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+10
+    <script>
+11
+        $(document).ready(function() {
+12
+            for (let i = 1; i <= 898; i++) {
+13
+                $('#container').append('<img id="' + i + '"src="http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + i + '.png">');
+14
+​
+15
+            }
+16
+​
+17
+​
+18
+            $('img').on('click', function() {
+19
+                var idImagen = $(this).attr('id');
+20
+                $.get("https://pokeapi.co/api/v2/pokemon/" + idImagen + "/", function(respuesta) {
+21
+​
+22
+                    console.dir(respuesta);
+23
+                    $('#pokeInfo').html('<h1>' + respuesta.name + '</h1>');
+24
+                    $('#pokeInfo').append('<img src="' + respuesta.sprites.front_default + '">');
+25
+                    $('#pokeInfo').append('<h2>Type: </h2>');
+26
+                    $('#pokeInfo').append('<h3>' + respuesta.types[0].type.name + '</h3>');
+27
+                    $('#pokeInfo').append('<h2>Height: </h2>');
+28
+                    $('#pokeInfo').append('<h3>' + respuesta.height + '</h3>');
+29
+                    $('#pokeInfo').append('<h2>Weigth: </h2>');
+30
+                    $('#pokeInfo').append('<h3>' + respuesta.weight + '</h3>');
+31
+                }, "json");
+32
+            });
+33
+        });
+34
+    </script>
+35
+    <style>
+36
+        #container,
+37
+        #pokeInfo {
+38
+            display: inline-block;
+39
+            vertical-align: top;
+40
+        }
+41
+        
+42
+       #container {
+43
+            background-color: lightblue;
+44
+            height: 800px;
+45
+            width: 70%;
+46
+            overflow-y: scroll;
+47
+        }
+48
+        h2 {
+49
+            color: red;
+50
+        }
+51
+    </style>
+52
+</head>
+53
+​
+54
+<body>
+55
+    <div id="container">
+56
+​
+57
+    </div>
+58
+    <div id=pokeInfo>
+59
+​
+60
+    </div>
+61
+</body>
+62
+​
+63
+</html>

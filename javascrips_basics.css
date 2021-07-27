@@ -1,0 +1,72 @@
+                                        #fondo {
+                                            background-color: #1B345D;
+                                            width: 970px;
+                                            height: 500px;
+                                            padding: 10px;
+                                        }
+                                        
+                                        #header {
+                                            background-color: #cf3036;
+                                            color: #c1d1d3;
+                                            font-size: 18px;
+                                            height: 60px;
+                                            text-align: center;
+                                        }
+                                        
+                                        #aside {
+                                            background-color: #297d8c;
+                                            color: white;
+                                            display: inline-block;
+                                            vertical-align: top;
+                                            width: 150px;
+                                            height: 280px;
+                                        }
+                                        
+                                        #main {
+                                            background-color: #000000;
+                                            color: white;
+                                            display: inline-block;
+                                            margin-left: 15px;
+                                            width: 790px;
+                                            height: 340px;
+                                        }
+                                        
+                                        #footer {
+                                            background-color: #5d6673;
+                                            height: 35px;
+                                            text-align: justify;
+                                        }
+                                        
+                                        #header,
+                                        #footer {
+                                            border-radius: 10px;
+                                            margin: 10px 0px 0px 0px;
+                                        }
+                                        
+                                        #footer {
+                                            padding: 10px;
+                                        }
+                                        
+                                        #aside {
+                                            padding: 10px;
+                                        }
+                                        
+                                        #main p,
+                                        #main h2 {
+                                            padding: 15px;
+                                            margin-left: 10px;
+                                        }
+                                        
+                                        #celeste {
+                                            color: #66d7df;
+                                        }
+                                        
+                                        #aside {
+                                            border-radius: 10px;
+                                            margin: 0px 10px 0px 0px;
+                                        }
+                                        
+                                        #main {
+                                            border-radius: 10px;
+                                            margin: 0px 10px 0px 0px;
+                                        }

@@ -1,0 +1,36 @@
+            * {
+                padding: 3px;
+            }
+            
+            #header {
+                background-color: gray;
+            }
+            
+            #footer {
+                background-color: rgb(255, 243, 154);
+            }
+            
+            #body {
+                background-color: khaki;
+            }
+            
+            @media only screen and (max-width: 480px) {
+                #tablet,
+                #desktop {
+                    display: none;
+                }
+            }
+            
+            @media only screen and (max-width: 1023px) and (min-width: 481px) {
+                #phone,
+                #desktop {
+                    display: none;
+                }
+            }
+            
+            @media only screen and (max-width: 1024px) {
+                #phone,
+                #tablet {
+                    display: none;
+                }
+            }

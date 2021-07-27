@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Clima</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $('document').ready(function() {
+
+            // tu codigo acá
+            $('p').click(function() {
+                var APPID = '8fcb4b3ee0c9be319fa9f8ffcfba2f47';
+                var lugar = $('#lugar').val(); //obtener el valor del input
+
+                var url = 'https://api.openweathermap.org/data/2.5/weather?q=' + lugar + '&APPID=' + APPID;
+
+                //llamar a la api
+                $.get(url, function(objeto) {
+                    console.dir(objeto);
+                }, "json");
+
+
+                $('#lugar').val('');//limpiar el input
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <label for="lugar">Ciudad: </label>
+        <input type="text" name="lugar" id="lugar">
+        <p>Consultar</p>
+    </div>
+</body>
+
+</html>
